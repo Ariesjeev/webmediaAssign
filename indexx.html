@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Garage Roof Company</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        .top-banner {
+            background-color: #110537;
+            color: white;
+            text-align: center;
+            padding: 8px 0;
+            font-size: 14px;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+            background-color: white;
+            border-bottom: 1px solid #eee;
+        }
+
+        .logo img {
+            height: 45px;
+            width: auto;
+        }
+        /*  */
+        
+        nav {
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* nav ul {
+            display: flex;
+            list-style: none;
+            gap: 15px;
+        } */
+
+        nav ul li {
+            display: flex;
+            align-items: center;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-size: 13px;
+            font-weight: 500;
+            white-space: nowrap;
+            padding: 0 5px;
+        }
+
+        nav ul li a:hover {
+            color: #666;
+        }
+
+        /* nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-size: 13px;
+            font-weight: 500;
+            gap: 68px;
+            white-space: nowrap;
+        }
+
+        nav ul li a:hover {
+            color: #666;
+        } */
+
+        .slider-container {
+            position: relative;
+            width: 100%;
+            height: calc(100vh - 95px);
+            overflow: hidden;
+        }
+
+        .slide {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .slide-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0, 0, 0, 0.75);
+            padding: 40px;
+            width: 70%;
+            text-align: center;
+        }
+
+        .slide-content h1 {
+            color: white;
+            font-size: 24px;
+            line-height: 1.4;
+            margin-bottom: 25px;
+            font-weight: 600;
+        }
+
+        .request-button {
+            background: white;
+            color: #333;
+            border: none;
+            padding: 12px 30px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .request-button:hover {
+            background: #f0f0f0;
+        }
+
+        .slider-nav {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            transform: translateY(-50%);
+            display: flex;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+
+        .nav-button {
+            background: rgba(255, 255, 255, 0.3);
+            border: none;
+            color: white;
+            font-size: 24px;
+            padding: 10px 15px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .nav-button:hover {
+            background: rgba(255, 255, 255, 0.5);
+        }
+
+        .separator {
+            color: #666;
+            margin: 0 5px;
+        }
+
+        .menu-toggle {
+            width: 24px;
+            height: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            cursor: pointer;
+            margin-left: 20px;
+        }
+
+        .menu-toggle span {
+            display: block;
+            width: 100%;
+            height: 2px;
+            background-color: #333;
+            transition: 0.3s;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 15px 20px;
+            }
+
+            nav ul {
+                display: none;
+            }
+
+            .slide-content {
+                width: 90%;
+                padding: 20px;
+            }
+
+            .slide-content h1 {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="top-banner">
+        Garage Roof Replacement Specialists
+    </div>
+
+    <header>
+        <div class="logo">
+            <img src="TGRC-Logo-Navy-Text.png" alt="The Garage Roof Company">
+        </div>
+        <nav>
+            
+            <ul>
+                <li><a href="#"><i class="fas fa-home nav-icon"></i>HOME</a></li>
+                <li class="nav-separator">|</li>
+                <li><a href="#"><i class="fas fa-info-circle nav-icon"></i>ABOUT</a></li>
+                <li class="nav-separator">|</li>
+                <li><a href="#"><i class="fas fa-tools nav-icon"></i>GARAGE ROOF REPLACEMENT</a></li>
+                <li class="nav-separator">|</li>
+                <li><a href="#">ASBESTOS TESTING</a></li>
+                <li class="nav-separator">|</li>
+                <li><a href="#">CONTACT</a></li>
+            </ul>
+        </nav>
+        <div class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <div class="slider-container">
+        <div class="slide">
+            <img src="garage-roof.jpg" alt="Garage Roof">
+            <div class="slide-content">
+                <h1>THE LEADING ASBESTOS GARAGE ROOF REPLACEMENT SPECIALIST COVERING LONDON, SURREY & SOUTH EAST OF ENGLAND</h1>
+                <button class="request-button">Request A Quotation</button>
+            </div>
+        </div>
+        <div class="slider-nav">
+            <button class="nav-button prev">&#10094;</button>
+            <button class="nav-button next">&#10095;</button>
+        </div>
+    </div>
+
+    <script>
+        document.querySelector('.request-button').addEventListener('click', function() {
+            // Form handling logic here
+            alert('Quotation request form will be here.');
+            console.log('Quote requested');
+
+        });
+
+        const prevButton = document.querySelector('.prev');
+        const nextButton = document.querySelector('.next');
+
+        prevButton.addEventListener('click', function() {
+            console.log('Previous slide');
+            // Add slide transition logic here
+        });
+
+        nextButton.addEventListener('click', function() {
+            console.log('Next slide');
+            // Add slide transition logic here
+        });
+    </script>
+</body>
+</html>
